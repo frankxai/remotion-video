@@ -1,0 +1,29 @@
+{
+  "name": "video-remotion",
+  "version": "1.0.0",
+  "description": "Hermes-powered Claude + Remotion short-form video factory. Superior sovereign implementation for GenCreator/Arcanea/Starlight/FrankX.",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts VerticalReel out/VerticalReel.mp4",
+    "render:props": "remotion render src/index.ts VerticalReel out/VerticalReel.mp4 --props='{\"title\":\"Test Hook\",\"subtitle\":\"Powered by Hermes + Remotion\"}'",
+    "render:hook": "remotion render src/index.ts VerticalReel out/hook-a.mp4 --props='{\"title\":\"Hook A\",\"subtitle\":\"First variation\"}' && remotion render src/index.ts VerticalReel out/hook-b.mp4 --props='{\"title\":\"Hook B\",\"subtitle\":\"Second variation\"}'",
+    "compositions": "remotion compositions src/index.ts",
+    "transcribe": "python ../scripts/transcribe.py",
+    "test": "echo \"Remotion video factory ready\""
+  },
+  "keywords": ["remotion", "video", "claude", "hermes", "gencreator", "shortform", "reels"],
+  "author": "Frank Riemer + Hermes Agent",
+  "license": "MIT",
+  "dependencies": {
+    "@remotion/captions": "^4.0.487",
+    "@remotion/cli": "^4.0.487",
+    "@remotion/lottie": "^4.0.487",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "remotion": "^4.0.487",
+    "typescript": "^5.5.4"
+  }
+}
