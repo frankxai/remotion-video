@@ -2,6 +2,12 @@
 
 Sovereign, local-first short-form video production system. Absorbs the Altari "Claude + Remotion Skill" and makes it dramatically better using the full GenCreator/Hermes/Arcanea/Starlight ecosystem.
 
+## GitHub Repository
+
+**Primary / canonical source**: https://github.com/frankxai/remotion-video
+
+This is the home for the complete upgraded guide (REMOTION_AGENT_SKILL.md + all prompts/workflows), starter project, compositions, scripts, and documentation. The Hermes skill links here.
+
 ## What It Does
 - Drop raw recording (ideally with deliberate black squares for motion graphics placeholders).
 - Local faster-whisper transcription (word-level timestamps).
