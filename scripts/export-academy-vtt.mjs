@@ -104,11 +104,11 @@ async function main() {
   await mkdir(outputDir, { recursive: true });
 
   const entries = (await readdir(manifestsDir))
-    .filter((file) => file.endsWith(".manifest.json"))
+    .filter((file) => file.endsWith(".json") && !file.endsWith(".schema.json"))
     .sort();
 
-  if (entries.length < 3) {
-    throw new Error(`Expected at least 3 academy manifests in ${manifestsDir}, found ${entries.length}`);
+  if (entries.length < 6) {
+    throw new Error(`Expected all 6 academy manifests in ${manifestsDir}, found ${entries.length}`);
   }
 
   const exported = [];

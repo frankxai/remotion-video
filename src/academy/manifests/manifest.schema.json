@@ -27,7 +27,7 @@
       "minLength": 3
     },
     "kind": {
-      "enum": ["trailer", "concept_anatomy", "terminal_lab"]
+      "enum": ["trailer", "concept_anatomy", "terminal_lab", "lab05_admission_gate", "vertical_reel"]
     },
     "fps": {
       "type": "integer",
