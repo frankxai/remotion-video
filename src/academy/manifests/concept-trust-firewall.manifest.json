@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "starlight.academy_video_manifest.v1",
+  "manifestId": "concept-trust-firewall",
+  "compositionId": "ConceptAnatomyExplainer",
+  "kind": "concept_anatomy",
+  "fps": 30,
+  "durationInFrames": 600,
+  "width": 1920,
+  "height": 1080,
+  "moduleCode": "WEEK 03 · ARCHITECTURE ANATOMY",
+  "title": "Trust Firewalls, Context Budgets & Eval Admission",
+  "subtitle": "Signaled multi-plane breakdown of how production agent runtimes quarantine untrusted retrieval and fail closed before release.",
+  "stages": [
+    {
+      "id": "stage-1-trust-firewall",
+      "startFrame": 0,
+      "endFrame": 200,
+      "plateKind": "trust-firewall",
+      "calloutBadge": "STAGE 01 · TRUST-BOUNDARY FIREWALL",
+      "stageTitle": "Separate T0 Operator Authority from T3 Retrieved Data",
+      "thesis": "Retrieved contract clauses are untrusted data to cite, never system instructions to obey. Typed channels strip imperative overrides before synthesis.",
+      "calloutBullets": [
+        "T0/T1 Constitution pins tool allowlists and human approval gates",
+        "T3 Quarantine wraps external clauses inside non-executable data envelopes",
+        "Citation verifier refuses uncited claims and routes empty evidence to a named owner"
+      ],
+      "activeNodeIds": [
+        "t0-authority",
+        "firewall-gate",
+        "t3-quarantine",
+        "citation-check"
+      ],
+      "metrics": [
+        {
+          "label": "T3 in system role",
+          "value": "0 bytes (design target)",
+          "tone": "emerald"
+        },
+        {
+          "label": "Injection payload",
+          "value": "QUARANTINED",
+          "tone": "crimson"
+        },
+        {
+          "label": "Empty-evidence route",
+          "value": "human_fallback",
+          "tone": "gold"
+        }
+      ]
+    },
+    {
+      "id": "stage-2-context-budget",
+      "startFrame": 200,
+      "endFrame": 400,
+      "plateKind": "context-budget",
+      "calloutBadge": "STAGE 02 · CONTEXT BUDGET & COMPACTION",
+      "stageTitle": "Prevent Silent Tail Truncation & Starved Context Windows",
+      "thesis": "Hardcoding 10,000-char single-slice ingestion or tiny 500-char synthesis caps silently deletes exception clauses at the end of long agreements.",
+      "calloutBullets": [
+        "Sliding-window chunking preserves 15% boundary overlap across section headers",
+        "Reciprocal Rank Fusion (k=60) pairs exact SKU/error-code hits with dense vectors",
+        "Explicit 15% headroom reserve prevents mid-turn instruction eviction"
+      ],
+      "activeNodeIds": [
+        "constitution-slot",
+        "retrieval-window",
+        "working-state",
+        "headroom-reserve"
+      ],
+      "metrics": [
+        {
+          "label": "Chunk window",
+          "value": "800c / 150c overlap",
+          "tone": "ice"
+        },
+        {
+          "label": "Dropped tail chars",
+          "value": "0 (design target)",
+          "tone": "emerald"
+        },
+        {
+          "label": "Headroom reserve",
+          "value": "15% pinned",
+          "tone": "gold"
+        }
+      ]
+    },
+    {
+      "id": "stage-3-eval-gate",
+      "startFrame": 400,
+      "endFrame": 600,
+      "plateKind": "eval-gate",
+      "calloutBadge": "STAGE 03 · NON-COMPENSABLE EVAL ADMISSION",
+      "stageTitle": "Aggregate Averages Cannot Override a Red-Gate Failure",
+      "thesis": "Even when a golden-set accuracy score looks high, a single indirect-injection leak or unguarded external send blocks promotion and emits a refusal code.",
+      "calloutBullets": [
+        "Deterministic offline fixture bank: golden answers, explicit refusals, injection probes",
+        "Maker != Checker: independent verifier signs exact artifact SHA-256 digest",
+        "Emits starlight.capability_receipt.v1 only when every red gate passes"
+      ],
+      "activeNodeIds": [
+        "golden-suite",
+        "red-gate-check",
+        "verdict-router",
+        "capability-receipt"
+      ],
+      "metrics": [
+        {
+          "label": "Red-gate policy",
+          "value": "NON-COMPENSABLE",
+          "tone": "crimson"
+        },
+        {
+          "label": "Offline fixtures",
+          "value": "deterministic (design)",
+          "tone": "ice"
+        },
+        {
+          "label": "Output contract",
+          "value": "capability_receipt.v1",
+          "tone": "gold"
+        }
+      ]
+    }
+  ],
+  "cues": [
+    {
+      "id": "concept-fw-cue-1",
+      "startFrame": 0,
+      "endFrame": 200,
+      "speaker": "Architect",
+      "text": "Stage one isolates T0 operator instructions from T3 retrieved documents so an injected clause can never escalate tool permissions or skip citations."
+    },
+    {
+      "id": "concept-fw-cue-2",
+      "startFrame": 200,
+      "endFrame": 400,
+      "speaker": "Architect",
+      "text": "Stage two allocates explicit context budgets: sliding-window chunk overlap and Reciprocal Rank Fusion stop silent tail truncation on exact error codes."
+    },
+    {
+      "id": "concept-fw-cue-3",
+      "startFrame": 400,
+      "endFrame": 600,
+      "speaker": "Architect",
+      "text": "Stage three enforces non-compensable admission: a high average score still fails closed if any injection, citation, or human-send red gate breaks."
+    }
+  ],
+  "provenance": {
+    "status": "design_concept",
+    "note": "Diagram values are design parameters/targets, not measured results. Labelled on screen."
+  }
+}

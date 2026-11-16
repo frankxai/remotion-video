@@ -8,6 +8,25 @@ import {
   interpolate,
 } from 'remotion';
 import { Captions, Word } from './Captions';
+import {
+  AcademyTrailer,
+  AcademyVerticalReel,
+  ConceptAnatomyExplainer,
+  Lab05AdmissionGateWalkthrough,
+  TerminalLabWalkthrough,
+  AcademyTrailerManifest,
+  AcademyVerticalReelManifest,
+  ConceptAnatomyManifest,
+  Lab05AdmissionGateManifest,
+  TerminalLabManifest,
+  assertValidAcademyManifest,
+} from './academy';
+import academyTrailerManifestJson from './academy/manifests/academy-trailer.manifest.json';
+import academyVerticalReelManifestJson from './academy/manifests/academy-vertical-reel.json';
+import conceptFirewallManifestJson from './academy/manifests/concept-trust-firewall.manifest.json';
+import conceptEvalGateManifestJson from './academy/manifests/concept-eval-admission-gate.manifest.json';
+import lab05AdmissionGateManifestJson from './academy/manifests/lab-05-admission-gate.json';
+import terminalLabManifestJson from './academy/manifests/terminal-lab-walkthrough.manifest.json';
 
 // Enhanced Vertical Reel with REAL word-level captions
 // Inspired by Altari guide + upgraded for Hermes
@@ -213,6 +232,105 @@ export const Root: React.FC = () => {
           captions: exampleCaptions,
         }}
       />
+
+      {/* Starlight Intelligence Academy × AI Architect Academy Pack */}
+      {(() => {
+        const trailerManifest = academyTrailerManifestJson as AcademyTrailerManifest;
+        const verticalReelManifest = academyVerticalReelManifestJson as AcademyVerticalReelManifest;
+        const firewallManifest = conceptFirewallManifestJson as ConceptAnatomyManifest;
+        const evalGateManifest = conceptEvalGateManifestJson as ConceptAnatomyManifest;
+        const lab05Manifest = lab05AdmissionGateManifestJson as Lab05AdmissionGateManifest;
+        const labManifest = terminalLabManifestJson as TerminalLabManifest;
+
+        assertValidAcademyManifest(trailerManifest);
+        assertValidAcademyManifest(verticalReelManifest);
+        assertValidAcademyManifest(firewallManifest);
+        assertValidAcademyManifest(evalGateManifest);
+        assertValidAcademyManifest(lab05Manifest);
+        assertValidAcademyManifest(labManifest);
+
+        return (
+          <>
+            <Composition
+              id="AcademyTrailer"
+              component={AcademyTrailer}
+              durationInFrames={trailerManifest.durationInFrames}
+              fps={trailerManifest.fps}
+              width={trailerManifest.width}
+              height={trailerManifest.height}
+              defaultProps={{
+                manifest: trailerManifest,
+                showCaptions: true,
+              }}
+            />
+
+            <Composition
+              id="AcademyVerticalReel"
+              component={AcademyVerticalReel}
+              durationInFrames={verticalReelManifest.durationInFrames}
+              fps={verticalReelManifest.fps}
+              width={verticalReelManifest.width}
+              height={verticalReelManifest.height}
+              defaultProps={{
+                manifest: verticalReelManifest,
+                showCaptions: true,
+              }}
+            />
+
+            <Composition
+              id="ConceptAnatomyExplainer"
+              component={ConceptAnatomyExplainer}
+              durationInFrames={firewallManifest.durationInFrames}
+              fps={firewallManifest.fps}
+              width={firewallManifest.width}
+              height={firewallManifest.height}
+              defaultProps={{
+                manifest: firewallManifest,
+                showCaptions: true,
+              }}
+            />
+
+            <Composition
+              id="ConceptAnatomyExplainer-EvalGate"
+              component={ConceptAnatomyExplainer}
+              durationInFrames={evalGateManifest.durationInFrames}
+              fps={evalGateManifest.fps}
+              width={evalGateManifest.width}
+              height={evalGateManifest.height}
+              defaultProps={{
+                manifest: evalGateManifest,
+                showCaptions: true,
+              }}
+            />
+
+            <Composition
+              id="TerminalLabWalkthrough"
+              component={TerminalLabWalkthrough}
+              durationInFrames={labManifest.durationInFrames}
+              fps={labManifest.fps}
+              width={labManifest.width}
+              height={labManifest.height}
+              defaultProps={{
+                manifest: labManifest,
+                showCaptions: true,
+              }}
+            />
+
+            <Composition
+              id="Lab05AdmissionGateWalkthrough"
+              component={Lab05AdmissionGateWalkthrough}
+              durationInFrames={lab05Manifest.durationInFrames}
+              fps={lab05Manifest.fps}
+              width={lab05Manifest.width}
+              height={lab05Manifest.height}
+              defaultProps={{
+                manifest: lab05Manifest,
+                showCaptions: true,
+              }}
+            />
+          </>
+        );
+      })()}
     </>
   );
 };

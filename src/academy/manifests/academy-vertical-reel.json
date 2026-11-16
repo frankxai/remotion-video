@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "starlight.academy_video_manifest.v1",
+  "manifestId": "academy-vertical-reel",
+  "compositionId": "AcademyVerticalReel",
+  "kind": "vertical_reel",
+  "fps": 30,
+  "durationInFrames": 450,
+  "width": 1080,
+  "height": 1920,
+  "eyebrow": "AI ARCHITECT ACADEMY × STARLIGHT",
+  "hookHeadline": "High fluency can still ship a breach.",
+  "hookSubline": "Stop grading AI agents on vibes. Test trust firewalls, hard budgets, and human gates offline.",
+  "statCallouts": [
+    {
+      "metric": "EXAMPLE p95 <= 4200ms",
+      "rule": "Illustrative latency SLO, not a measured result",
+      "tone": "ice"
+    },
+    {
+      "metric": "EXAMPLE cost <= $0.05",
+      "rule": "Illustrative spend ceiling, not a measured result",
+      "tone": "gold"
+    },
+    {
+      "metric": "EXAMPLE safety == 100%",
+      "rule": "1 failed red gate = REJECTED",
+      "tone": "crimson"
+    }
+  ],
+  "icpCards": [
+    {
+      "code": "ICP-01",
+      "label": "Enterprise Systems Architect",
+      "hook": "Pin T0 constitutions & VPC data boundaries",
+      "shippedProof": "AGENT_SYSTEM_CONSTITUTION.md + ADR",
+      "accent": "ice"
+    },
+    {
+      "code": "ICP-02",
+      "label": "Production AI Builder",
+      "hook": "Repair 5 offline Python & TypeScript labs",
+      "shippedProof": "RAG · Multi-agent · MCP · Eval harness · Tool-authority gate",
+      "accent": "emerald"
+    },
+    {
+      "code": "ICP-03",
+      "label": "Technical GenCreator",
+      "hook": "Ship SVG system plates & Remotion video",
+      "shippedProof": "design.md + WebVTT explainers",
+      "accent": "gold"
+    },
+    {
+      "code": "ICP-04",
+      "label": "Structured Workflow Operator",
+      "hook": "Separate assist-only queues from auto-runs",
+      "shippedProof": "00-frame.md + numeric killCriterion",
+      "accent": "violet"
+    }
+  ],
+  "receiptBanner": {
+    "contract": "starlight.capability_receipt.v1",
+    "ritualLoop": "15m Unaided Attempt -> Red-Gate Suite -> 20m Peer Critique -> Day-7 Transfer",
+    "ctaPrimary": "BUILD & VERIFY IN GIT TODAY",
+    "ctaUrls": [
+      "frankx.ai/guides",
+      "github.com/frankxai/ai-architect-academy",
+      "starlightintelligence.academy"
+    ]
+  },
+  "cues": [
+    {
+      "id": "reel-cue-1",
+      "startFrame": 0,
+      "endFrame": 145,
+      "speaker": "Architect",
+      "text": "A high fluency score can still ship an incident when one prompt injection bypasses your gate. As an illustrative example, enforce a hard latency limit, a hard cost ceiling, and 100 percent safety."
+    },
+    {
+      "id": "reel-cue-2",
+      "startFrame": 145,
+      "endFrame": 305,
+      "speaker": "Architect",
+      "text": "Four builder tracks—from Enterprise Architects and Production Builders to Technical GenCreators and Workflow Operators—verify every boundary in code."
+    },
+    {
+      "id": "reel-cue-3",
+      "startFrame": 305,
+      "endFrame": 450,
+      "speaker": "Architect",
+      "text": "Log an unaided attempt, repair five offline labs, complete a twenty-minute peer critique, and earn a portable capability receipt."
+    }
+  ],
+  "provenance": {
+    "status": "illustrative",
+    "note": "Thresholds are example values, not measured results. Lab list matches repo labs 01-05. Labelled on screen."
+  }
+}

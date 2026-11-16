@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starlightintelligence.academy/schemas/academy_video_manifest.v1.json",
+  "title": "Starlight Academy Video Manifest v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "manifestId",
+    "compositionId",
+    "kind",
+    "fps",
+    "durationInFrames",
+    "width",
+    "height",
+    "cues"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "starlight.academy_video_manifest.v1"
+    },
+    "manifestId": {
+      "type": "string",
+      "minLength": 3
+    },
+    "compositionId": {
+      "type": "string",
+      "minLength": 3
+    },
+    "kind": {
+      "enum": ["trailer", "concept_anatomy", "terminal_lab", "lab05_admission_gate", "vertical_reel"]
+    },
+    "fps": {
+      "type": "integer",
+      "minimum": 24,
+      "maximum": 120
+    },
+    "durationInFrames": {
+      "type": "integer",
+      "minimum": 30
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 640
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 360
+    },
+    "cues": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "startFrame", "endFrame", "speaker", "text"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "startFrame": { "type": "integer", "minimum": 0 },
+          "endFrame": { "type": "integer", "minimum": 1 },
+          "speaker": { "type": "string", "minLength": 1 },
+          "text": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

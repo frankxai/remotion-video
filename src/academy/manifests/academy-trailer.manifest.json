@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "starlight.academy_video_manifest.v1",
+  "manifestId": "academy-trailer",
+  "compositionId": "AcademyTrailer",
+  "kind": "trailer",
+  "fps": 30,
+  "durationInFrames": 540,
+  "width": 1920,
+  "height": 1080,
+  "eyebrow": "STARLIGHT INTELLIGENCE ACADEMY × AI ARCHITECT ACADEMY",
+  "headline": "Build accountable agent systems. Prove every boundary.",
+  "subheadline": "Four builder lenses, twelve failure-first weeks, offline Python & TypeScript labs, and digest-bound capability receipts.",
+  "icpTracks": [
+    {
+      "id": "enterprise-architect",
+      "label": "Enterprise Systems Architect",
+      "code": "ICP-01",
+      "focus": "Trust firewalls, ADR governance, VPC data boundaries & gateway failover",
+      "artifact": "AGENT_SYSTEM_CONSTITUTION.md + Capability Receipt",
+      "accent": "ice"
+    },
+    {
+      "id": "production-builder",
+      "label": "Production AI Builder",
+      "code": "ICP-02",
+      "focus": "Hybrid RAG chunk geometry, zero-trust MCP servers & golden eval harnesses",
+      "artifact": "Offline Python/TS labs 01–05: repair the starter until its tests pass",
+      "accent": "emerald"
+    },
+    {
+      "id": "technical-creator",
+      "label": "Technical GenCreator",
+      "code": "ICP-03",
+      "focus": "design.md systems, crisp SVG architecture plates & code-driven Remotion video",
+      "artifact": "Anti-slop visual system + WebVTT-accessible explainers",
+      "accent": "gold"
+    },
+    {
+      "id": "workflow-operator",
+      "label": "Structured Workflow Operator",
+      "code": "ICP-04",
+      "focus": "Workflow triage (automate / assist-only / do-not-automate) & human review queues",
+      "artifact": "00-frame.md + measurable killCriterion + rollback SOP",
+      "accent": "violet"
+    }
+  ],
+  "acts": [
+    {
+      "actCode": "ACT I",
+      "weeks": "Weeks 01–04",
+      "title": "Foundations, Retrieval & Firewalls",
+      "modules": [
+        "W01 Workflow Triage & Kill Criteria",
+        "W02 Hybrid RAG & Chunk Overlap",
+        "W03 T0/T3 Trust-Boundary Firewalls",
+        "W04 Zero-Trust MCP v2 Tool Meshes"
+      ],
+      "gateSummary": "Zero silent truncation · T3 data quarantine"
+    },
+    {
+      "actCode": "ACT II",
+      "weeks": "Weeks 05–08",
+      "title": "Skills, Multi-Agent FSMs & Evals",
+      "modules": [
+        "W05 Portable SKILL.md Compilation",
+        "W06 Maker-Checker State Machines",
+        "W07 Memory Privacy & Sanitization",
+        "W08 Non-Compensable Golden Evals"
+      ],
+      "gateSummary": "Maker != Checker · Non-compensable admission"
+    },
+    {
+      "actCode": "ACT III",
+      "weeks": "Weeks 09–12",
+      "title": "Multimodal Studio & CoE Runbooks",
+      "modules": [
+        "W09 design.md & SVG System Plates",
+        "W10 Programmatic Remotion & WebVTT",
+        "W11 Gateway Routing & Unit Economics",
+        "W12 Disaster Recovery & Architecture Defense"
+      ],
+      "gateSummary": "Day-7 transfer check · Verified receipt"
+    }
+  ],
+  "redGates": [
+    {
+      "gateId": "rg-t3-quarantine",
+      "label": "Untrusted T3 retrieval isolated from T0 system prompt",
+      "fluencyScore": "example gate",
+      "gateVerdict": "BLOCKED",
+      "releaseOutcome": "REFUSED_FAIL_CLOSED"
+    },
+    {
+      "gateId": "rg-human-money-send",
+      "label": "Spend, pricing, and outbound sends require named human gate",
+      "fluencyScore": "example gate",
+      "gateVerdict": "PASS",
+      "releaseOutcome": "RECEIPT_ISSUED"
+    },
+    {
+      "gateId": "rg-day7-transfer",
+      "label": "Day-7 changed-context perturbation solved unaided first",
+      "fluencyScore": "example gate",
+      "gateVerdict": "PASS",
+      "releaseOutcome": "RECEIPT_ISSUED"
+    }
+  ],
+  "surfaceBridge": [
+    {
+      "step": "01",
+      "surface": "FrankX Guides",
+      "urlLabel": "frankx.ai/guides",
+      "output": "Pattern literacy & trade-off framing"
+    },
+    {
+      "step": "02",
+      "surface": "AI Architect Academy",
+      "urlLabel": "github.com/frankxai/ai-architect-academy",
+      "output": "Offline Python/TS fault-injection labs"
+    },
+    {
+      "step": "03",
+      "surface": "SIA Mission Studio",
+      "urlLabel": "starlightintelligence.academy",
+      "output": "Red-gate verification & capability receipt"
+    },
+    {
+      "step": "04",
+      "surface": "Circle Creation Cells",
+      "urlLabel": "6-space builder campus (draft-gated)",
+      "output": "20-min peer critique & Day-7 transfer"
+    }
+  ],
+  "cues": [
+    {
+      "id": "trailer-cue-1",
+      "startFrame": 0,
+      "endFrame": 135,
+      "speaker": "Narrator",
+      "text": "Most AI courses stop at happy-path notebooks. Production architecture starts where untrusted inputs, budgets, and human boundaries meet."
+    },
+    {
+      "id": "trailer-cue-2",
+      "startFrame": 135,
+      "endFrame": 270,
+      "speaker": "Narrator",
+      "text": "Across twelve weeks and three acts, four builder tracks progress from workflow triage and hybrid RAG to multi-agent governance and Remotion studios."
+    },
+    {
+      "id": "trailer-cue-3",
+      "startFrame": 270,
+      "endFrame": 405,
+      "speaker": "Narrator",
+      "text": "High fluency scores never mask a broken safety invariant: non-compensable red gates fail closed on prompt injection, uncited claims, or unguarded sends."
+    },
+    {
+      "id": "trailer-cue-4",
+      "startFrame": 405,
+      "endFrame": 540,
+      "speaker": "Narrator",
+      "text": "Start in a FrankX guide, repair an offline terminal lab, verify your mission receipt, and sharpen your judgment inside a five-person Creation Cell."
+    }
+  ],
+  "provenance": {
+    "status": "program_description",
+    "note": "Describes the planned curriculum shape only. Gate rows are examples; no scores, learner counts or outcomes are claimed. Labelled on screen."
+  }
+}
