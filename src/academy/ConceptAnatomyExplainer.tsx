@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import defaultFirewallManifestJson from "./manifests/concept-trust-firewall.manifest.json";
-import { ACADEMY_THEME, AcademySubtitleBar, ObsidianBackdrop } from "./theme";
+import { ACADEMY_THEME, AcademySubtitleBar, IllustrativeBadge, ObsidianBackdrop } from "./theme";
 import { ConceptAnatomyManifest, ConceptMetricChip, ConceptStageSpec } from "./types";
 
 export type ConceptAnatomyExplainerProps = {
@@ -385,7 +385,7 @@ const ContextBudgetSvgPlate: React.FC<{ activeNodeIds: string[] }> = ({ activeNo
         fontSize="15"
         fontWeight="700"
       >
-        ALLOCATED CONTEXT WINDOW BUDGET (100% DETERMINISTIC PARTITION)
+        ALLOCATED CONTEXT WINDOW BUDGET (EXAMPLE DESIGN PARTITION)
       </text>
 
       {/* Segmented Token Bar */}
@@ -445,7 +445,7 @@ const ContextBudgetSvgPlate: React.FC<{ activeNodeIds: string[] }> = ({ activeNo
 
       <rect x="42" y="410" width="896" height="164" rx="16" fill="#101B24" stroke="rgba(52,211,153,0.45)" strokeWidth="1.8" />
       <text x="68" y="448" fill="#34D399" fontFamily={ACADEMY_THEME.fonts.mono} fontSize="14" fontWeight="700">
-        ✓ REPAIRED SLIDING WINDOW: step = chunk_size - overlap (100% tail preserved)
+        ✓ REPAIRED SLIDING WINDOW: step = chunk_size - overlap (design intent)
       </text>
       {[0, 1, 2, 3].map((idx) => (
         <g key={idx}>
@@ -564,7 +564,7 @@ const EvalGateSvgPlate: React.FC<{ activeNodeIds: string[] }> = ({ activeNodeIds
           RefusalCode emitted
         </text>
         <text x="714" y="468" fill="#9BA7BC" fontFamily={ACADEMY_THEME.fonts.mono} fontSize="13">
-          Even at 94% fluency avg
+          Even with high fluency scores
         </text>
       </g>
 
@@ -808,6 +808,7 @@ export const ConceptAnatomyExplainer: React.FC<ConceptAnatomyExplainerProps> = (
       </div>
 
       <AcademySubtitleBar cues={manifest.cues} frame={frame} showCaptions={showCaptions} />
+      <IllustrativeBadge label="ILLUSTRATIVE DESIGN CONCEPT · NOT MEASURED RESULTS" />
     </AbsoluteFill>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import defaultVerticalReelJson from "./manifests/academy-vertical-reel.json";
-import { ACADEMY_THEME } from "./theme";
+import { ACADEMY_THEME, IllustrativeBadge } from "./theme";
 import { AcademyCaptionCue, AcademyVerticalReelManifest, VerticalReelIcpCard } from "./types";
 
 export type AcademyVerticalReelProps = {
@@ -562,6 +562,7 @@ export const AcademyVerticalReel: React.FC<AcademyVerticalReelProps> = ({
       </div>
 
       <VerticalSubtitleBar cues={manifest.cues} frame={frame} showCaptions={showCaptions} />
+      <IllustrativeBadge label="EXAMPLE THRESHOLDS · NOT MEASURED RESULTS" top={24} right={24} />
     </AbsoluteFill>
   );
 };

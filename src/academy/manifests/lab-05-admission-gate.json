@@ -7,9 +7,9 @@
   "durationInFrames": 900,
   "width": 1920,
   "height": 1080,
-  "labPath": "labs/05-eval-admission-gate",
-  "labTitle": "Offline Lab 05: 5-Case Non-Compensable Eval Admission Gate",
-  "runtimeLabel": "Python 3.12 · 5 deterministic cases · p95 <= 4200ms · cost <= $0.05 · safety == 100%",
+  "labPath": "illustrative-example (no matching repo lab)",
+  "labTitle": "ILLUSTRATIVE: 5-Case Non-Compensable Eval Gate",
+  "runtimeLabel": "ILLUSTRATIVE · example thresholds · 5 example cases · p95 <= 4200ms · cost <= $0.05 · safety == 100%",
   "thresholds": {
     "maxP95LatencyMs": 4200,
     "maxCostUsd": 0.05,
@@ -34,7 +34,7 @@
     "totalCases": 5,
     "verdict": "ADMITTED",
     "receiptSchema": "starlight.capability_receipt.v1",
-    "receiptDigest": "sha256:4e91b7c02a6d8f13...c809"
+    "receiptDigest": "sha256:<illustrative>"
   },
   "evalCases": [
     {
@@ -74,7 +74,7 @@
       "starterVerdict": "FAIL",
       "starterFailureReason": "Uncited guess emitted; safety != 100%",
       "goldenLatencyMs": 960,
-      "goldenCostUsd": 0.010,
+      "goldenCostUsd": 0.01,
       "goldenSafetyPct": 100,
       "goldenVerdict": "PASS"
     },
@@ -129,15 +129,42 @@
       "exitCode": 0,
       "summary": "Replace weighted-score compensation with fail-closed conjuncts: p95 <= 4200ms, cost <= $0.05, and safety == 100% across all 5 cases.",
       "diffLines": [
-        { "kind": "prompt", "text": "$ git diff labs/05-eval-admission-gate/admission_gate.py" },
-        { "kind": "meta", "text": "@@ -29,8 +29,14 @@ def evaluate_admission(cases, metrics):" },
-        { "kind": "diff_del", "text": "-  composite = 0.7 * metrics.fluency + 0.3 * metrics.safety_ratio" },
-        { "kind": "diff_del", "text": "-  return {'verdict': 'ADMITTED' if composite >= 0.80 else 'REJECTED'}" },
-        { "kind": "diff_add", "text": "+  if metrics.safety_pct != 100:" },
-        { "kind": "diff_add", "text": "+      return reject('safety-red-gate-failed', safety_pct=metrics.safety_pct)" },
-        { "kind": "diff_add", "text": "+  if metrics.p95_ms > 4200 or metrics.max_cost_usd > 0.05:" },
-        { "kind": "diff_add", "text": "+      return reject('budget-slo-breached', p95=metrics.p95_ms, cost=metrics.max_cost_usd)" },
-        { "kind": "diff_add", "text": "+  return admit_with_digest_receipt(cases, metrics)" }
+        {
+          "kind": "prompt",
+          "text": "$ git diff labs/05-eval-admission-gate/admission_gate.py"
+        },
+        {
+          "kind": "meta",
+          "text": "@@ -29,8 +29,14 @@ def evaluate_admission(cases, metrics):"
+        },
+        {
+          "kind": "diff_del",
+          "text": "-  composite = 0.7 * metrics.fluency + 0.3 * metrics.safety_ratio"
+        },
+        {
+          "kind": "diff_del",
+          "text": "-  return {'verdict': 'ADMITTED' if composite >= 0.80 else 'REJECTED'}"
+        },
+        {
+          "kind": "diff_add",
+          "text": "+  if metrics.safety_pct != 100:"
+        },
+        {
+          "kind": "diff_add",
+          "text": "+      return reject('safety-red-gate-failed', safety_pct=metrics.safety_pct)"
+        },
+        {
+          "kind": "diff_add",
+          "text": "+  if metrics.p95_ms > 4200 or metrics.max_cost_usd > 0.05:"
+        },
+        {
+          "kind": "diff_add",
+          "text": "+      return reject('budget-slo-breached', p95=metrics.p95_ms, cost=metrics.max_cost_usd)"
+        },
+        {
+          "kind": "diff_add",
+          "text": "+  return admit_with_digest_receipt(cases, metrics)"
+        }
       ]
     },
     {
@@ -169,7 +196,7 @@
       "startFrame": 0,
       "endFrame": 180,
       "speaker": "Eval Gate",
-      "text": "Lab five tests five deterministic contract cases against three non-compensable production thresholds: p95 latency at or below 4200 milliseconds, cost at or below five cents, and 100 percent safety."
+      "text": "This illustrative example, not a real lab run, checks five example cases against three non-compensable thresholds: p95 latency at or below 4200 milliseconds, cost at or below five cents, and 100 percent safety."
     },
     {
       "id": "lab05-cue-2",
@@ -190,7 +217,7 @@
       "startFrame": 540,
       "endFrame": 720,
       "speaker": "Eval Gate",
-      "text": "Running the golden candidate clears all five cases offline: p95 drops to 2940 milliseconds, peak run cost stays at 3.1 cents, and safety holds at 100 percent."
+      "text": "Running the golden candidate clears all five cases offline: example p95 drops below the limit, example peak run cost stays under the ceiling, and safety holds at 100 percent."
     },
     {
       "id": "lab05-cue-5",
@@ -199,5 +226,9 @@
       "speaker": "Eval Gate",
       "text": "Comparing faulty REJECTED against golden ADMITTED proves Maker is not Checker before issuing a SHA-256 capability receipt and queuing Day-seven transfer."
     }
-  ]
+  ],
+  "provenance": {
+    "status": "illustrative",
+    "note": "All terminal lines, scores, thresholds and receipts in this composition are illustrative examples authored for the video. They are NOT output of a real ai-architect-academy lab run and are labelled as such on screen. The lab path named here does not exist in the academy repo; real labs are 01-rag-pipeline, 02-multi-agent-system, 03-mcp-server, 04-eval-harness, 05-tool-authority-gate."
+  }
 }

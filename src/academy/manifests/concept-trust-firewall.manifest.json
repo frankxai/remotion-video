@@ -24,11 +24,28 @@
         "T3 Quarantine wraps external clauses inside non-executable data envelopes",
         "Citation verifier refuses uncited claims and routes empty evidence to a named owner"
       ],
-      "activeNodeIds": ["t0-authority", "firewall-gate", "t3-quarantine", "citation-check"],
+      "activeNodeIds": [
+        "t0-authority",
+        "firewall-gate",
+        "t3-quarantine",
+        "citation-check"
+      ],
       "metrics": [
-        { "label": "T3 in system role", "value": "0 bytes", "tone": "emerald" },
-        { "label": "Injection payload", "value": "QUARANTINED", "tone": "crimson" },
-        { "label": "Empty-evidence route", "value": "human_fallback", "tone": "gold" }
+        {
+          "label": "T3 in system role",
+          "value": "0 bytes (design target)",
+          "tone": "emerald"
+        },
+        {
+          "label": "Injection payload",
+          "value": "QUARANTINED",
+          "tone": "crimson"
+        },
+        {
+          "label": "Empty-evidence route",
+          "value": "human_fallback",
+          "tone": "gold"
+        }
       ]
     },
     {
@@ -44,11 +61,28 @@
         "Reciprocal Rank Fusion (k=60) pairs exact SKU/error-code hits with dense vectors",
         "Explicit 15% headroom reserve prevents mid-turn instruction eviction"
       ],
-      "activeNodeIds": ["constitution-slot", "retrieval-window", "working-state", "headroom-reserve"],
+      "activeNodeIds": [
+        "constitution-slot",
+        "retrieval-window",
+        "working-state",
+        "headroom-reserve"
+      ],
       "metrics": [
-        { "label": "Chunk window", "value": "800c / 150c overlap", "tone": "ice" },
-        { "label": "Dropped tail chars", "value": "0 (verified)", "tone": "emerald" },
-        { "label": "Headroom reserve", "value": "15% pinned", "tone": "gold" }
+        {
+          "label": "Chunk window",
+          "value": "800c / 150c overlap",
+          "tone": "ice"
+        },
+        {
+          "label": "Dropped tail chars",
+          "value": "0 (design target)",
+          "tone": "emerald"
+        },
+        {
+          "label": "Headroom reserve",
+          "value": "15% pinned",
+          "tone": "gold"
+        }
       ]
     },
     {
@@ -58,17 +92,34 @@
       "plateKind": "eval-gate",
       "calloutBadge": "STAGE 03 · NON-COMPENSABLE EVAL ADMISSION",
       "stageTitle": "Aggregate Averages Cannot Override a Red-Gate Failure",
-      "thesis": "Even when golden accuracy exceeds 90%, a single indirect-injection leak or unguarded external send blocks promotion and emits a refusal code.",
+      "thesis": "Even when a golden-set accuracy score looks high, a single indirect-injection leak or unguarded external send blocks promotion and emits a refusal code.",
       "calloutBullets": [
         "Deterministic offline fixture bank: golden answers, explicit refusals, injection probes",
         "Maker != Checker: independent verifier signs exact artifact SHA-256 digest",
         "Emits starlight.capability_receipt.v1 only when every red gate passes"
       ],
-      "activeNodeIds": ["golden-suite", "red-gate-check", "verdict-router", "capability-receipt"],
+      "activeNodeIds": [
+        "golden-suite",
+        "red-gate-check",
+        "verdict-router",
+        "capability-receipt"
+      ],
       "metrics": [
-        { "label": "Red-gate policy", "value": "NON-COMPENSABLE", "tone": "crimson" },
-        { "label": "Offline fixtures", "value": "100% deterministic", "tone": "ice" },
-        { "label": "Output contract", "value": "capability_receipt.v1", "tone": "gold" }
+        {
+          "label": "Red-gate policy",
+          "value": "NON-COMPENSABLE",
+          "tone": "crimson"
+        },
+        {
+          "label": "Offline fixtures",
+          "value": "deterministic (design)",
+          "tone": "ice"
+        },
+        {
+          "label": "Output contract",
+          "value": "capability_receipt.v1",
+          "tone": "gold"
+        }
       ]
     }
   ],
@@ -94,5 +145,9 @@
       "speaker": "Architect",
       "text": "Stage three enforces non-compensable admission: a high average score still fails closed if any injection, citation, or human-send red gate breaks."
     }
-  ]
+  ],
+  "provenance": {
+    "status": "design_concept",
+    "note": "Diagram values are design parameters/targets, not measured results. Labelled on screen."
+  }
 }

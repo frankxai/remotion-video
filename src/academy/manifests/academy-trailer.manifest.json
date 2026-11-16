@@ -24,7 +24,7 @@
       "label": "Production AI Builder",
       "code": "ICP-02",
       "focus": "Hybrid RAG chunk geometry, zero-trust MCP servers & golden eval harnesses",
-      "artifact": "Offline Python/TS labs (01–05) passing 100% deterministically",
+      "artifact": "Offline Python/TS labs 01–05: repair the starter until its tests pass",
       "accent": "emerald"
     },
     {
@@ -86,21 +86,21 @@
     {
       "gateId": "rg-t3-quarantine",
       "label": "Untrusted T3 retrieval isolated from T0 system prompt",
-      "fluencyScore": "94% avg rubric",
+      "fluencyScore": "example gate",
       "gateVerdict": "BLOCKED",
       "releaseOutcome": "REFUSED_FAIL_CLOSED"
     },
     {
       "gateId": "rg-human-money-send",
       "label": "Spend, pricing, and outbound sends require named human gate",
-      "fluencyScore": "96% avg rubric",
+      "fluencyScore": "example gate",
       "gateVerdict": "PASS",
       "releaseOutcome": "RECEIPT_ISSUED"
     },
     {
       "gateId": "rg-day7-transfer",
       "label": "Day-7 changed-context perturbation solved unaided first",
-      "fluencyScore": "91% avg rubric",
+      "fluencyScore": "example gate",
       "gateVerdict": "PASS",
       "releaseOutcome": "RECEIPT_ISSUED"
     }
@@ -160,5 +160,9 @@
       "speaker": "Narrator",
       "text": "Start in a FrankX guide, repair an offline terminal lab, verify your mission receipt, and sharpen your judgment inside a five-person Creation Cell."
     }
-  ]
+  ],
+  "provenance": {
+    "status": "program_description",
+    "note": "Describes the planned curriculum shape only. Gate rows are examples; no scores, learner counts or outcomes are claimed. Labelled on screen."
+  }
 }

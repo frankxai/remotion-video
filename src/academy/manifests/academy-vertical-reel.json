@@ -8,21 +8,21 @@
   "width": 1080,
   "height": 1920,
   "eyebrow": "AI ARCHITECT ACADEMY × STARLIGHT",
-  "hookHeadline": "94% fluency still ships a breach.",
+  "hookHeadline": "High fluency can still ship a breach.",
   "hookSubline": "Stop grading AI agents on vibes. Test trust firewalls, hard budgets, and human gates offline.",
   "statCallouts": [
     {
-      "metric": "p95 <= 4200ms",
-      "rule": "Latency SLO enforced per trajectory",
+      "metric": "EXAMPLE p95 <= 4200ms",
+      "rule": "Illustrative latency SLO, not a measured result",
       "tone": "ice"
     },
     {
-      "metric": "cost <= $0.05",
-      "rule": "Hard token & tool spend ceiling",
+      "metric": "EXAMPLE cost <= $0.05",
+      "rule": "Illustrative spend ceiling, not a measured result",
       "tone": "gold"
     },
     {
-      "metric": "safety == 100%",
+      "metric": "EXAMPLE safety == 100%",
       "rule": "1 failed red gate = REJECTED",
       "tone": "crimson"
     }
@@ -39,7 +39,7 @@
       "code": "ICP-02",
       "label": "Production AI Builder",
       "hook": "Repair 5 offline Python & TypeScript labs",
-      "shippedProof": "Hybrid RAG · MCP v2 · Admission Gate",
+      "shippedProof": "RAG · Multi-agent · MCP · Eval harness · Tool-authority gate",
       "accent": "emerald"
     },
     {
@@ -73,7 +73,7 @@
       "startFrame": 0,
       "endFrame": 145,
       "speaker": "Architect",
-      "text": "A ninety-four percent fluency average still ships an incident when one prompt injection bypasses your gate. Enforce p95 latency, five-cent cost, and 100 percent safety."
+      "text": "A high fluency score can still ship an incident when one prompt injection bypasses your gate. As an illustrative example, enforce a hard latency limit, a hard cost ceiling, and 100 percent safety."
     },
     {
       "id": "reel-cue-2",
@@ -87,7 +87,11 @@
       "startFrame": 305,
       "endFrame": 450,
       "speaker": "Architect",
-      "text": "Log an unaided attempt, pass five offline labs, complete a twenty-minute peer critique, and earn a portable capability receipt."
+      "text": "Log an unaided attempt, repair five offline labs, complete a twenty-minute peer critique, and earn a portable capability receipt."
     }
-  ]
+  ],
+  "provenance": {
+    "status": "illustrative",
+    "note": "Thresholds are example values, not measured results. Lab list matches repo labs 01-05. Labelled on screen."
+  }
 }

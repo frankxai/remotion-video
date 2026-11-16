@@ -34,3 +34,21 @@ npx remotion still src/index.ts AcademyTrailer out/academy-trailer-frame.png --f
 npx remotion still src/index.ts ConceptAnatomyExplainer out/concept-explainer-frame.png --frame=300
 npx remotion still src/index.ts TerminalLabWalkthrough out/terminal-lab-frame.png --frame=320
 ```
+
+## Provenance (no fabricated runs)
+
+Every manifest carries a `provenance` block and every composition shows an on-screen label.
+Nothing shown is claimed as a real result unless it is cited below.
+
+Real runs of `frankxai/ai-architect-academy` (shallow clone, Python 3.11.18, pytest installed locally) that may be quoted:
+
+| Lab | Command | Real output |
+|-----|---------|-------------|
+| `labs/04-eval-harness` | `python harness.py --prompt prompts/regressed.txt; echo $?` | `5/5 passed`, exit `0` (the starter harness cannot go red on the seeded regression; baseline also exit `0`) |
+| `labs/04-eval-harness` | `python -m pytest tests -q` | `7 failed, 1 passed` (starter) |
+| `labs/05-tool-authority-gate` | `python agent.py "summarize ticket 42"` | audit log: `read_ticket`, `issue_refund` (amount `500`), `close_ticket`, all `allowed: true`, reason `model is trusted to pick tools` |
+| `labs/05-tool-authority-gate` | `python -m pytest tests -q` | `8 failed, 4 passed` (starter) |
+
+`TerminalLabWalkthrough` and `Lab05AdmissionGateWalkthrough` are **illustrative**: the labs they name
+(`04-trust-boundary-firewall`, `05-eval-admission-gate`) do not exist in the academy repo, so their terminal
+output, scores and receipts are examples and are badged as such.

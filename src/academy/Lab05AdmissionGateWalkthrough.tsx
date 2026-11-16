@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import defaultLab05ManifestJson from "./manifests/lab-05-admission-gate.json";
-import { ACADEMY_THEME, AcademySubtitleBar, ObsidianBackdrop } from "./theme";
+import { ACADEMY_THEME, AcademySubtitleBar, IllustrativeBadge, ObsidianBackdrop } from "./theme";
 import { Lab05AdmissionGateManifest, Lab05PhaseSpec, TerminalLineSpec } from "./types";
 
 export type Lab05AdmissionGateWalkthroughProps = {
@@ -812,6 +812,7 @@ export const Lab05AdmissionGateWalkthrough: React.FC<Lab05AdmissionGateWalkthrou
       </div>
 
       <AcademySubtitleBar cues={manifest.cues} frame={frame} showCaptions={showCaptions} />
+      <IllustrativeBadge />
     </AbsoluteFill>
   );
 };

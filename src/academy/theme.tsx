@@ -160,3 +160,35 @@ export const AcademySubtitleBar: React.FC<{
     </div>
   );
 };
+
+/**
+ * Persistent on-screen provenance label. Every number, score, terminal line or
+ * result shown in a composition that is NOT copied from a real, cited run must
+ * carry this badge (see manifest `provenance`).
+ */
+export const IllustrativeBadge: React.FC<{ label?: string; top?: number; right?: number }> = ({
+  label = "ILLUSTRATIVE EXAMPLE · NOT OUTPUT OF A REAL LAB RUN",
+  top = 18,
+  right = 28,
+}) => (
+  <div
+    style={{
+      position: "absolute",
+      top,
+      right,
+      zIndex: 50,
+      padding: "7px 16px",
+      borderRadius: 999,
+      backgroundColor: "rgba(9, 11, 16, 0.92)",
+      border: `1.5px solid ${ACADEMY_THEME.colors.softGoldBorder}`,
+      color: ACADEMY_THEME.colors.softGold,
+      fontFamily: ACADEMY_THEME.fonts.mono,
+      fontSize: 15,
+      fontWeight: 700,
+      letterSpacing: 1,
+      pointerEvents: "none",
+    }}
+  >
+    {label}
+  </div>
+);

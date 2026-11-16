@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import trailerManifestJson from "./manifests/academy-trailer.manifest.json";
-import { ACADEMY_THEME, AcademySubtitleBar, ObsidianBackdrop } from "./theme";
+import { ACADEMY_THEME, AcademySubtitleBar, IllustrativeBadge, ObsidianBackdrop } from "./theme";
 import { AcademyTrailerManifest, TrailerIcpTrack } from "./types";
 
 export type AcademyTrailerProps = {
@@ -646,6 +646,7 @@ export const AcademyTrailer: React.FC<AcademyTrailerProps> = ({
       </div>
 
       <AcademySubtitleBar cues={manifest.cues} frame={frame} showCaptions={showCaptions} />
+      <IllustrativeBadge label="ILLUSTRATIVE DESIGN CONCEPT · NOT MEASURED RESULTS" top={86} right={76} />
     </AbsoluteFill>
   );
 };

@@ -24,11 +24,28 @@
         "Adversarial probes verify prompt-injection quarantine and refusal codes",
         "Independent verifier binds sign-off to the exact head commit SHA-256"
       ],
-      "activeNodeIds": ["golden-suite", "red-gate-check", "verdict-router", "capability-receipt"],
+      "activeNodeIds": [
+        "golden-suite",
+        "red-gate-check",
+        "verdict-router",
+        "capability-receipt"
+      ],
       "metrics": [
-        { "label": "Safety threshold", "value": "100% required", "tone": "crimson" },
-        { "label": "Verifier lane", "value": "Maker != Checker", "tone": "gold" },
-        { "label": "Network calls", "value": "0 (offline deterministic)", "tone": "emerald" }
+        {
+          "label": "Safety threshold",
+          "value": "100% required",
+          "tone": "crimson"
+        },
+        {
+          "label": "Verifier lane",
+          "value": "Maker != Checker",
+          "tone": "gold"
+        },
+        {
+          "label": "Network calls",
+          "value": "0 (design: offline)",
+          "tone": "emerald"
+        }
       ]
     },
     {
@@ -44,11 +61,27 @@
         "Capability allowlist denies unapproved write, spend, and send tools",
         "Structured refusal log records exact gate ID for forensic audit"
       ],
-      "activeNodeIds": ["t3-quarantine", "firewall-gate", "citation-check"],
+      "activeNodeIds": [
+        "t3-quarantine",
+        "firewall-gate",
+        "citation-check"
+      ],
       "metrics": [
-        { "label": "Direct send access", "value": "DENIED", "tone": "crimson" },
-        { "label": "Clause citation", "value": "MANDATORY", "tone": "ice" },
-        { "label": "Audit trace", "value": "JSONL receipt", "tone": "emerald" }
+        {
+          "label": "Direct send access",
+          "value": "DENIED",
+          "tone": "crimson"
+        },
+        {
+          "label": "Clause citation",
+          "value": "MANDATORY",
+          "tone": "ice"
+        },
+        {
+          "label": "Audit trace",
+          "value": "JSONL receipt",
+          "tone": "emerald"
+        }
       ]
     },
     {
@@ -64,11 +97,27 @@
         "Working trace compacts older tool logs into digest-verified checkpoints",
         "Day-7 perturbation revalidates the receipt under shifted constraints"
       ],
-      "activeNodeIds": ["constitution-slot", "working-state", "headroom-reserve"],
+      "activeNodeIds": [
+        "constitution-slot",
+        "working-state",
+        "headroom-reserve"
+      ],
       "metrics": [
-        { "label": "T0 eviction rate", "value": "0.0%", "tone": "emerald" },
-        { "label": "Checkpoint state", "value": "SHA-256 bound", "tone": "gold" },
-        { "label": "Revalidation", "value": "Day +7 transfer", "tone": "ice" }
+        {
+          "label": "T0 eviction rate",
+          "value": "0% (design target)",
+          "tone": "emerald"
+        },
+        {
+          "label": "Checkpoint state",
+          "value": "SHA-256 bound",
+          "tone": "gold"
+        },
+        {
+          "label": "Revalidation",
+          "value": "Day +7 transfer",
+          "tone": "ice"
+        }
       ]
     }
   ],
@@ -94,5 +143,9 @@
       "speaker": "Verifier",
       "text": "Finally, long-context replay verifies that compaction preserves the pinned constitution and revalidates your capability receipt on Day seven."
     }
-  ]
+  ],
+  "provenance": {
+    "status": "design_concept",
+    "note": "Diagram values are design parameters/targets, not measured results. Labelled on screen."
+  }
 }

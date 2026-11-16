@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import defaultLabManifestJson from "./manifests/terminal-lab-walkthrough.manifest.json";
-import { ACADEMY_THEME, AcademySubtitleBar, ObsidianBackdrop } from "./theme";
+import { ACADEMY_THEME, AcademySubtitleBar, IllustrativeBadge, ObsidianBackdrop } from "./theme";
 import { TerminalLabManifest, TerminalLineSpec, TerminalStepSpec } from "./types";
 
 export type TerminalLabWalkthroughProps = {
@@ -469,6 +469,7 @@ export const TerminalLabWalkthrough: React.FC<TerminalLabWalkthroughProps> = ({
       </div>
 
       <AcademySubtitleBar cues={manifest.cues} frame={frame} showCaptions={showCaptions} />
+      <IllustrativeBadge />
     </AbsoluteFill>
   );
 };
